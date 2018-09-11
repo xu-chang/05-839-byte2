@@ -24,7 +24,7 @@ JINJA_ENVIRONMENT = jinja2.Environment(
     autoescape=True)
 
 # This API key is provided by google as described in the tutorial
-with open(os.path.dirname(os.path.abspath(__file__)) + '/API_KEY') as f:
+with open(os.path.dirname(os.path.abspath(__file__)) + '/API_KEY.apikey') as f:
     API_KEY = f.read().strip()
 
 # This uses discovery to create an object that can talk to the 
