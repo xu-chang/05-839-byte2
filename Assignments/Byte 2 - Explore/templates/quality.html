@@ -46,27 +46,39 @@
       <!-- Main jumbotron for a primary marketing message or call to action -->
       <div class="jumbotron">
 	<h1>Quality: About This Data Set</h1>
-        <p>Write a brief summary about the quality of the data set here</a></p>
+        <p>Data used in the visualization comes from the IMDB Dataset located at 
+        <a href="https://www.imdb.com/interfaces/">https://www.imdb.com/interfaces/</a>.</p>
+        <p>Two tsv files are used: 1. <b>title.basics.tsv.gz</b> which contains and not 
+        limited to the unique identifier, title, start year, runtime and genres of movies, 
+        TV-series and reality TV shows, etc. 2. <b>title.ratings.tsv.gz</b> which contains
+        the unique identifier, average rating and the number of votes per title.</p>
       </div>
 
     
       <div class="page-header">
 	<h2>Is the data complete?</h2>
-	<p>If not, what is missing and what concerns does it raise?
-	What is your evidence for this?</p>
+	<p style="font-size:18px">As per my filtering strategy, movies need to have more than 
+	10,000 ratings to be selected. If the movie is this popular, it is not really possible 
+	for the worlds' biggest movie database to fail to include it. And it is also less likely for 
+	the IMDB to miss titles in the released spreadsheets. Therefore, I would consider this data
+	complete.</p>
       </div>
       
       <div class="page-header">
 	<h2>Is the data coherent?</h2>
-	<p>Does it make sense relative to itself? Does it match your
-	expectations? Are the distributions sensible? What is your
-	evidence for this?</p>
+	<p style="font-size:18px">Yes, after inspection, all fields are of correct type. There is 
+	no column shift, the "genre" field has no small typos, ratings are within 0-10 range and 
+	have at most one decimal digit, no duplicate records exist. 
+	Overall, this is a well maintained dataset.</p>
       </div>
 
       <div class="page-header">
 	<h2>Is the data correct?</h2>
-	<p>What aspects of this data can you verify? How did you do so? What did
-	you find?</p>
+	<p style="font-size:18px">The unknown algorithm should ensure that the ratings are immune from 
+	malicious ratings, and the ratings can be more reliable and represent the public opionion when 
+	the number of ratings is large. However, the website is in English, which means it has a bias
+	towards the movie preferences of English-speaking audiences. Therefore, the conclusion of any 
+	study on this dataset may not be reasonably generalized for all audiences.</p>
       </div>
 
     </div> <!-- /container -->

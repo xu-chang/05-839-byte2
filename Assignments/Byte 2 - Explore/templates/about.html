@@ -47,18 +47,43 @@
       <!-- Main jumbotron for a primary marketing message or call to action -->
       <div class="jumbotron">
 	<h1>Accountability: About This Data Set</h1>
-        <p>Write a brief summary about the data set here</a></p>
+        <p>Data used in the visualization comes from the IMDB Dataset located at 
+        <a href="https://www.imdb.com/interfaces/">https://www.imdb.com/interfaces/</a>.</p>
+        <p>Two tsv files are used: 1. <b>title.basics.tsv.gz</b> which contains and not 
+        limited to the unique identifier, title, start year, runtime and genres of movies, 
+        TV-series and reality TV shows, etc. 2. <b>title.ratings.tsv.gz</b> which contains
+        the unique identifier, average rating and number of votes of titles.</p>
       </div>
 
-    
       <div class="page-header">
 	<h2>Where did this data come from?</h2>
-	<p>fill in</p>
+	<p style="font-size:18px"><b>Origin of data:</b> As mentioned, the original data comes 
+	from the IMDB dataset. IMDB gathers movie information and verify them with production
+	companies. Ratings are done by registered IMDB members. In fear of being maliciously 
+	manipulated, IMDB has not released its rating algorithm.
+	<p style="font-size:18px"><b>Preprocessing:</b> 
+	After I got the two tsv files, I used Python Pandas library to join the two tables with 
+	the unique identifier as key. Since there are 860k+ titles that have been rated and 
+	obvious a lot more with out ratings, I filtered titles
+	by only seleting movies and limiting the number of votes > 10,000. I considered 
+	movies with smaller number of votes as noise. The resulting table consists of 7,000+ 
+	rows. The resulting table, which is the one uploaded to Fusion Table, includes columns
+	of ID, movie title, year released, runtime in minutes, genres, average ratings and 
+	number of votes. The visulization also excluded some genres like News and Documentary
+	since I only want to include titles with screenwriting. Film-Noir is also excluded for
+	the small number of movies falling in this category and that the term is only used for
+	certain movies produced in the 1940s and 1950s.</p>
       </div>
       
       <div class="page-header">
 	<h2>Who has access to it?</h2>
-	<p>fill in</p>
+	<p style="font-size:18px">Data access is not disclosed by IMDB, I would imagine the 
+	rating work	is done automatically by the algorithm to compute weighted average and any
+	update to the database is logged and regularly audited by trusted authorities. However,
+	I cannot guarantee there is no manual intervention during a surge of intentional high or
+	low ratings or there is no motivated insiders to modify a movie's rating to increase it's 
+	box office performance.
+	</p>
       </div>
 
 

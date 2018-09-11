@@ -1,0 +1,12 @@
+#!/bin/sh
+'''exec' "/home/xuchang0310/src/05-839-byte2/Assignments/Byte 2 - Explore/venv/bin/python" "$0" "$@"
+' '''
+# -*- coding: utf-8 -*-
+import re
+import sys
+
+from rsa.cli import keygen
+
+if __name__ == '__main__':
+    sys.argv[0] = re.sub(r'(-script\.pyw?|\.exe)?$', '', sys.argv[0])
+    sys.exit(keygen())
