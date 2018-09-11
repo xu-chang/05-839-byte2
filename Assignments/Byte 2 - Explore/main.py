@@ -24,7 +24,8 @@ JINJA_ENVIRONMENT = jinja2.Environment(
     autoescape=True)
 
 # This API key is provided by google as described in the tutorial
-API_KEY = 'AIzaSyB0IyiAZn6vBo_nqx702gAXz7h2t7KT7tw'
+with open(os.path.dirname(os.path.abspath(__file__)) + '/API_KEY') as f:
+    API_KEY = f.read().strip()
 
 # This uses discovery to create an object that can talk to the 
 # fusion tables API using the developer key
