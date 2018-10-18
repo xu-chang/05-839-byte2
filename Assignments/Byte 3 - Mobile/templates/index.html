@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -8,250 +8,196 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" href="favicon.ico">
-    <title>Index</title>
+    <title>Byte4</title>
+
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <!-- Bootstrap theme -->
     <link href="css/bootstrap-theme.min.css" rel="stylesheet">
     <!-- Custom styles for this project -->
     <link href="css/explore.css" rel="stylesheet">
-  </head>
-  
-  <body role="document">
-    
-    <!-- Fixed navbar -->
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-      <div class="container" >
+</head>
+
+<body role="document">
+
+<!-- Fixed navbar -->
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
         <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                    aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
-          <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="about">About This Data Set</a></li>
-	    <li><a href="quality">Data Quality</a></li>
-          </ul>
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="about">About This Data Set</a></li>
+                <li><a href="quality">Data Quality</a></li>
+            </ul>
         </div><!--/.nav-collapse -->
-      </div>
-    </nav>
+    </div>
+</nav>
+
+<div class="container theme-showcase" role="main">
+
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron">
+        <h1>Interactive Data Science Project Exploratory Analysis Byte</h1>
+        <p>This is Byte 4 of the Interactive Data Science class.</p>
+        <p>Source code can be found <a href="https://github.com/xu-chang/05-839-byte2/tree/master/Assignments/Byte%203%20-%20Mobile">
+        here</a></p>
+    </div>
+
+    <div class="page-header">
+
+    </div> <!-- /page-header -->
+</div> <!-- /container -->
+
+<div class="container" style="background-color:#F0F0F0; padding-top:10px; padding-left:50px; padding-right:50px">
+    <h2>Relationship Between Battery Status and Ambient Light</h2>
+    <p style="font-size:18px">
+    As a background story, my mobile phone charger is at my Nightstand, far from my work desk, 
+    therefore I only charge my phone when I'm on bed, lights off and ready to sleep. 
+    </p>
+    <p style="font-size:18px">
+    From the figure we can see that I went to sleep at 4 or 5 am each day, except on Oct 15 I went 
+    to bed early in the evening since I have a morning class (but still got up in the night for two 
+    hours to play with my phone...). I can also see that I sleep for a stable 8 hours a day (count 
+    from the bottom of the battery status curve which is when I start to charge the phone to the point
+    where the remaining battery starts to descrease). Combining with the light statistics, we can clearly
+    see that the light luminance goes to zero when the phone starts charging, suggesting the light in
+    the room is turned off. On Oct 17, the light level gradually goes up before I woke up, that is 
+    because my room has a east-facing window and Oct 17 is the only day when the sun is up in the 
+    morning, previously we had overcasts.
+    </p>
     
-    <div class="container theme-showcase" role="main">
-      
-      <!-- Main jumbotron for a primary marketing message or call to action -->
-      <div class="jumbotron">
-	<h1>Interactive Data Science Project Exploratory Analysis Byte Example</h1>
-        <p>This is the Exploratory Analysis Byte of the Interactive Data Science class.</p>
-      </div>
-      
-      <div class="page-header">
-	
-      </div> <!-- /page-header -->
-    </div> <!-- /container -->
+    <div class='tableauPlaceholder' id='viz1539834172895' style='position: relative'>
+	    <noscript><a href='#'><img alt=' '
+	                               src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;By&#47;Byte4_4&#47;Dashboard1&#47;1_rss.png'
+	                               style='border: none'/></a></noscript>
+	    <object class='tableauViz' style='display:none;'>
+	        <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F'/>
+	        <param name='embed_code_version' value='3'/>
+	        <param name='site_root' value=''/>
+	        <param name='name' value='Byte4_4&#47;Dashboard1'/>
+	        <param name='tabs' value='no'/>
+	        <param name='toolbar' value='yes'/>
+	        <param name='static_image'
+	               value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;By&#47;Byte4_4&#47;Dashboard1&#47;1.png'/>
+	        <param name='animate_transition' value='yes'/>
+	        <param name='display_static_image' value='yes'/>
+	        <param name='display_spinner' value='yes'/>
+	        <param name='display_overlay' value='yes'/>
+	        <param name='display_count' value='yes'/>
+	        <param name='filter' value='publish=yes'/>
+	    </object>
+	</div>
+	<script type='text/javascript'>
+	                        var divElement = document.getElementById('viz1539834172895');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.minWidth='1024px';vizElement.style.maxWidth='1200px';vizElement.style.width='100%';vizElement.style.minHeight='507px';vizElement.style.maxHeight='887px';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                
+	</script>
 
-<svg></svg>
+</div>
 
-<!-- STYLES FOR D3 -->
-<style>
-/* Styles for date/time chart */
-path { 
-    stroke: steelblue;
-    stroke-width: 2;
-    fill: none;
-}
+<div class="container" style="background-color:#F0F0F0;margin-bottom:50px">
+    <hr style="border-color:black">
+</div>
 
-.axis path,
-.axis line {
-    fill: none;
-    stroke: grey;
-    stroke-width: 1;
-    shape-rendering: crispEdges;
-}
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="js/jquery-1.11.3.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script>
+	function updateTable(str) {
+		console.log("in updateTable");
+		console.log(str);
 
-div.tooltip {	
-    position: absolute;			
-    text-align: center;			
-    width: 60px;					
-    height: 28px;					
-    padding: 2px;				
-    font: 12px sans-serif;		
-    background: lightsteelblue;	
-    border: 0px;		
-    border-radius: 8px;			
-    pointer-events: none;			
-}
-/* End styles for date/time chart */
+	    // error checking: ignore buttons that don't have a title!
+		if (str == "") {
+			return;
+		}
 
-/* Styles for bar chart */
-.bar {
-  fill: steelblue;
-}
-.bar:hover {
-  fill: brown;
-}
-/* End styles for bar chart*/
-</style>
+	    // find the actual button in this document's HTML
+		button = document.getElementById(str);
+		// for debugging, write its name to the console
+		console.log(button.className);
+		// check if it is disabled (btn-info)
+		if (button.className.includes("btn-info")) {
+			// and enable it (btn-primary)
+			button.className = "btn btn-space btn-primary";
+		} else {
+			// otherwise disable it (btn-info)
+			button.className = "btn btn-space btn-info";
+		}
 
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="js/jquery-1.11.3.min.js"></script>
-    <script src="js/bootstrap.min.js"></script> 
-    <script src="https://d3js.org/d3.v4.min.js"></script>
-    <script>
-    $( document ).ready(function() {
-	
-		/* Start date/time hover graph code
-		*/
-		
-		// Set the dimensions of the canvas / graph
-		var margin = {top: 30, right: 20, bottom: 30, left: 50},
-		    width = 600 - margin.left - margin.right,
-		    height = 270 - margin.top - margin.bottom;
-		
-		// Parse the date / time
-		var parseDate = d3.timeParse("%d-%b-%y");
-		var formatTime = d3.timeFormat("%e %B");
-		
-		// Set the x and y ranges
-		var x = d3.scaleTime().range([0, width]);
-		var y = d3.scaleLinear().range([height, 0]);
-		
-		// Define the axes
-		var xAxis = d3.axisBottom(x).ticks(5);
-		
-		var yAxis = d3.axisLeft(y).ticks(5);
-		
-		// Define the line we're going to draw via our data points
-		var valueline = d3.line()
-		    .x(function(d) { return x(d.date); })
-		    .y(function(d) { return y(d.close); });
-		
-		// Define the div for the tooltip
-		var div = d3.select("body").append("div")	
-		    .attr("class", "tooltip")				
-		    .style("opacity", 0);
-		
-		// Adds the svg canvas
-		var svg = d3.select("body")
-		    .append("svg")
-		        .attr("width", width + margin.left + margin.right)
-		        .attr("height", height + margin.top + margin.bottom)
-		    .append("g")
-		        .attr("transform", 
-		              "translate(" + margin.left + "," + margin.top + ")");
-		
-		// Get the data
-		d3.csv("css/walk.csv", function(error, data) {
-		    data.forEach(function(d) {
-		        d.date = parseDate(d.date);
-		        d.close = +d.close;
-				console.log('d.date: ' + d.date + ', d.close: ' + d.close);
-		    });
-		
-		    // Scale the range of the data
-		    x.domain(d3.extent(data, function(d) { return d.date; }));
-		    y.domain([0, d3.max(data, function(d) { return d.close; })]);
-		
-		    // Add the valueline path.
-		    svg.append("path")
-		        .attr("class", "line")
-		        .attr("d", valueline(data));
-		
-		    // Add the scatterplot
-		    svg.selectAll("dot")	
-		        .data(data)			
-		    .enter().append("circle")								
-		        .attr("r", 5)		
-		        .attr("cx", function(d) { return x(d.date); })		 
-		        .attr("cy", function(d) { return y(d.close); })		
-		        .on("mouseover", function(d) {		
-		            div.transition()		
-		                .duration(200)		
-		                .style("opacity", .9);		
-		            div	.html(formatTime(d.date) + "<br/>"  + d.close)	
-		                .style("left", (d3.event.pageX) + "px")		
-		                .style("top", (d3.event.pageY - 28) + "px");	
-		            })					
-		        .on("mouseout", function(d) {		
-		            div.transition()		
-		                .duration(500)		
-		                .style("opacity", 0);	
-		        });
-		
-		    // Add the X Axis
-		    svg.append("g")
-		        .attr("class", "x axis")
-		        .attr("transform", "translate(0," + height + ")")
-		        .call(xAxis);
-		
-		    // Add the Y Axis
-		    svg.append("g")
-		        .attr("class", "y axis")
-		        .call(yAxis);
+		// now get all the buttons
+		buttons = document.getElementById("headers").children;
+		// and collect their names in cols
+		cols = [];
+		// loop through them
+		for (button in buttons) {
+			// grab the id (the name we need is there)
+			id = buttons[button].id;
+			// make sure it isn't null
+			if (buttons[button].id != null) {
+				// and that the button is selected
+				var isPrimary = buttons[button].className.includes("btn-primary");
+				if (isPrimary && (cols.indexOf(id) == -1)) {
+					// if so, add it to our array
+					cols.push(id);
+				}
+			}
+		}
+
+		$.ajax({
+			url: '/_update_table',
+			dataType: 'json',
+			contentType: 'application/json',
+			data: JSON.stringify({'cols' : cols}),
+			type: 'POST',
+			success: function (res, status) {
+				console.log("successrunning");
+				console.log(res["content"]);
+				console.log(res["headers"]);
+				var cols = res["headers"];
+				var rows = res["content"];
+
+				// get the table, columns and rows
+				table = document.getElementById("data");
+				headers = document.getElementById("cols");
+				body = document.getElementById("rows");
+
+				// delete current contents
+				headers.innerHTML='';
+				body.innerHTML = '';
+
+				// and put the new information in the table
+				for (col in cols) {
+					cell = document.createElement("th");
+					cell.innerHTML = cols[col];
+					headers.appendChild(cell);
+				}
+				for (row in rows) {
+					tr = document.createElement("tr");
+					for (item in rows[row]) {
+						td = document.createElement("td");
+						td.innerHTML = rows[row][item];
+						tr.appendChild(td);
+					}
+					body.appendChild(tr);
+				}
+			},
+			error: function(res, status) {
+				// On Error
+				alert('error');
+			}
 		});
-		//End date/time hover graph
-		
+	}
 
-	
-	/*  Code for the bar chart, remove the surrounding comment markers to display.
-		When doing so, be sure to delete this text and comment out the above chart
-		
-		
-		var bar_svg = d3.select("svg").attr("width", 1200).attr("height", 1200),
-		    margin = {top: 20, right: 20, bottom: 30, left: 40},
-		    width = +bar_svg.attr("width") - margin.left - margin.right,
-		    height = +bar_svg.attr("height") - margin.top - margin.bottom;
-	
-		var x = d3.scaleBand().rangeRound([0, width]).padding(0.1),
-		    y = d3.scaleLinear().rangeRound([height, 0]);
-		
-		var g = bar_svg.append("g")
-		    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
-		
-		d3.csv("css/sports.csv", function(d) {//d3.tsv("data.tsv", function(d) {
-		  //d.Year = +d.Year;
-		  d.Year = parseInt(d["Average attendance"].replace(',',''));
-		  return d;
-		}, function(error, data) {
-		  if (error) throw error;
-		
-		  x.domain(data.map(function(d) { return d.Tournament; }));
-		  y.domain([0, d3.max(data, function(d) { return d.Year; })]);
-		
-		  //Defines the X axis
-		  g.append("g")
-		      .attr("class", "axis axis--x")
-		      .attr("transform", "translate(0," + height + ")")
-		      .call(d3.axisBottom(x));
-		
-		  //Defines the Y axis
-		  g.append("g")
-		      .attr("class", "axis axis--y")
-		      .call(d3.axisLeft(y).ticks(10, "s"))
-		    .append("text")
-		      .attr("transform", "rotate(-90)")
-		      .attr("y", 6)
-		      .attr("dy", "0.71em")
-		      .attr("text-anchor", "end")
-		      .text("Year");
-		
-		  g.selectAll(".bar")
-		    .data(data)
-		    .enter().append("rect")
-		      .attr("class", "bar")
-		      .attr("x", function(d) { return x(d.Tournament); })
-		      .attr("y", function(d) { return y(d.Year); })
-		      .attr("width", x.bandwidth())
-		      .attr("height", function(d) { return height - y(d.Year); });
-		}); */ 
-		//End bar chart code
-		
-	}); //End document ready			   
 </script>
 </body>
 </html>

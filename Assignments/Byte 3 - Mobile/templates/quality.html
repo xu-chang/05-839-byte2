@@ -46,29 +46,37 @@
       <!-- Main jumbotron for a primary marketing message or call to action -->
       <div class="jumbotron">
 	<h1>Quality: About This Data Set</h1>
-        <p>Write a brief summary about the quality of the data set here</a></p>
+        <p>Data used in the visualization comes from the data collected on my personal 
+        mobile phone by app AWARE from around 7pm on Oct 13th to 8pm on Oct 17th.</p>
       </div>
 
     
       <div class="page-header">
 	<h2>Is the data complete?</h2>
-	<p>If not, what is missing and what concerns does it raise?
-	What is your evidence for this?</p>
+	<p style="font-size:18px">The AWARE app has never crashed. I always ensures WiFi connection
+	for it to upload data promptly. MySQL database on the cloud has been working without issue. 
+	Manual inspection of the tables and the resulting visualization shows that the data makes sense
+	and are continuous, that is, no significant gap in time that lacks records. 
+	Therefore, I would consider this data complete.</p>
       </div>
       
       <div class="page-header">
 	<h2>Is the data coherent?</h2>
-	<p>Does it make sense relative to itself? Does it match your
-	expectations? Are the distributions sensible? What is your
-	evidence for this?</p>
+	<p style="font-size:18px">Yes, after inspection, all fields are of correct type. There is 
+	no column shift, no typos, battery status are within 0-100, light intensities are larger or equal
+	to 0. Timestamps are correctly recorded and can be interpreted by Tableau without error.
       </div>
 
       <div class="page-header">
 	<h2>Is the data correct?</h2>
-	<p>What aspects of this data can you verify? How did you do so? What did
-	you find?</p>
+	<p style="font-size:18px">I found that luminance record sometimes reaches more than 20000, which 
+	seems unlikely since the majority of records are within 0~1000 range. I think it is the problem with
+	the sensor, so I removed records with larger than 1000 luminance with Tableau's filtering function.
+	On the otherhand, the curve of the remaining battery life is continuous, no sudden changes, are
+	within the expected range and matches my memory of when I charged the phone and when I unplugged the 
+	cord.</p>
       </div>
-
+	
     </div> <!-- /container -->
 
 

@@ -47,18 +47,41 @@
       <!-- Main jumbotron for a primary marketing message or call to action -->
       <div class="jumbotron">
 	<h1>Accountability: About This Data Set</h1>
-        <p>Write a brief summary about the data set here</a></p>
+        <p>Data used in the visualization comes from the data collected on my personal 
+        mobile phone by app AWARE from around 7pm on Oct 13th to 8pm on Oct 17th.</p>
+        
       </div>
 
-    
       <div class="page-header">
 	<h2>Where did this data come from?</h2>
-	<p>fill in</p>
+	<p style="font-size:18px"><b>Origin of data:</b> As mentioned, the original data comes 
+	from the the app AWARE. 
+	<p style="font-size:18px">Two tables in the collection is used: 1. <b>light</b> which records the quantity of 
+        light measured in lumens by the ambient light sensor on the phone. Data is collected
+        a few times per second.
+        2. <b>battery</b> which contains the remaining battery percentage. Data ranges from 
+        20% to 100%, total of 500+ rows are recorded.
+    </p>
+        
+	<p style="font-size:18px"><b>Preprocessing:</b> 
+	After dumping the database from MySQL server hosted on GCP as csv files, I used Tableau
+	to filter the bad data from the light table. Since there are records with more than 20000
+	lumens, which is very unlikely, so I used filtering tool in Tableau to remove records with
+	larger than 1000 lumens from the table.
+	Then, I outer joined the light table and battery table on timestamp. The reason why I used
+	outer join is that the number of records between two tables are very different, using inner 
+	join will lose the majority of the light table. Also, if i use left join, there is not many
+	exact matchs on timestamps. Since I'm planning to use line chart for visualization, null cells
+	are tolerable, therefore, I used outer join to perserve all the data points.
+	</p>
       </div>
       
       <div class="page-header">
 	<h2>Who has access to it?</h2>
-	<p>fill in</p>
+	<p style="font-size:18px"> Only I have access to the data. I never lend my mobile phone to 
+	others. MySQL database which AWARE uploads data to is open to public but protected by the 
+	password only known by me. 
+	</p>
       </div>
 
 
